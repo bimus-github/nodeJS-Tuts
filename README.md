@@ -23,3 +23,13 @@
 - [File Exists](#file-exists)
 - [Delete File](#delete-file)
 - [FS Promises](#fs-promises)
+
+## Lesson 3
+
+- [Introduction](#introduction)
+- [Modules](#modules)
+- [Core Modules](#core-modules)
+- [Custom Modules](#custom-modules)
+- [NPM Modules](#npm-modules)
+- [NPM Scripts](#npm-scripts)
+- [CommonJs vs Esm](#commonjs-vs-esm)
