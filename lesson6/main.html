@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+  </head>
+  <body>
+    <div>
+      <form id="createNameFrom">
+        <input type="text" id="nameInput" />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="names"></ul>
+    </div>
+
+    <script>
+      const form = document.getElementById("createNameFrom");
+      const nameInput = document.getElementById("nameInput");
+      const names = document.getElementById("names");
+
+      fetch("http://localhost:3500/names", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          }
+          throw new Error("Something went wrong!");
+        })
+        .then((data) => {
+          data.names.forEach((name) => {
+            const li = document.createElement("li");
+            li.innerText = name;
+            names.appendChild(li);
+          });
+        });
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = nameInput.value;
+
+        fetch("http://localhost:3500/names", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name }),
+        });
+
+        const li = document.createElement("li");
+
+        li.innerText = name;
+
+        names.appendChild(li);
+
+        nameInput.value = "";
+      });
+    </script>
+  </body>
+</html>
