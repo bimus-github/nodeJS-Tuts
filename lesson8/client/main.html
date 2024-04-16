@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/03893a9d0b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>To Do List</title>
+  </head>
+  <body>
+    <main class="w-full h-screen flex flex-col items-center p-10">
+      <form
+        id="addToDoForm"
+        class="w-full max-w-lg border border-gray-200 rounded-lg p-2 flex justify-between items-center"
+      >
+        <textarea
+          id="toDoInput"
+          type="text"
+          placeholder="What needs to be done?"
+          class="w-full border-0 focus:ring-0 text-gray-600 placeholder:text-gray-500 focus:outline-none"
+          rows="4"
+          cols="50"
+        ></textarea>
+        <button
+          type="submit"
+          class="fa-solid fa-plus text-center inline block text-black text-[24px] hover:bg-gray-100 rounded-full p-2"
+        ></button>
+      </form>
+      <hr class="w-full max-w-3xl mt-5" />
+      <menu class="w-full max-w-3xl p-5 mt-5">
+        <h1 class="text-center">
+          <span class="font-bold text-3xl text-gray-600">To-Dos</span>
+        </h1>
+        <ul id="toDoList" class="mt-2">
+          <p id="noToDo" class="text-gray-600 text-center text-lg">
+            There is no any to dos yet!
+          </p>
+          <!-- <li
+            class="mt-5 text-gray-600 flex justify-between items-center border border-gray-200 rounded-lg p-5"
+          >
+            <span>
+              <p class="text-sm">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
+                nisi minus cupiditate explicabo id eum esse facilis perferendis
+                ducimus, beatae veniam? Tempore ipsam dolores consectetur porro
+                inventore dignissimos impedit error?
+                <em class="text-sm text-gray-400 ml-2 font-normal"
+                  >20/04/2023</em
+                >
+              </p>
+            </span>
+            <span class="flex flex-col gap-1">
+              <i
+                class="fa-solid fa-pen text-center text-blue-500 inline block text-black text-[16px] hover:bg-gray-100 rounded-full p-2"
+              ></i>
+              <i
+                class="fa-solid fa-trash text-center text-red-500 inline block text-black text-[16px] hover:bg-gray-100 rounded-full p-2"
+              ></i>
+            </span>
+          </li> -->
+        </ul>
+      </menu>
+    </main>
+    <script src="main.js"></script>
+    <script src="utils.js"></script>
+  </body>
+</html>
