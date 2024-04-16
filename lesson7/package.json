@@ -1,0 +1,16 @@
+{
+  "name": "lesson7",
+  "version": "1.0.0",
+  "description": "ExpressJs Tutorial - Middleware",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
